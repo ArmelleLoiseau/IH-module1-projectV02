@@ -1,0 +1,30 @@
+
+Total = nb de points gagnés à chaque victoire
+Bonus = si tous les personnages sont isContacted
+Malus = si des random excuses ont été générées
+
+1 logique / la diviser en nombre de personnages
+
+Au tout départ, text intro et bouton "play" 
+=> page d'accueil avec fond plan métro et pictos personnages positionnés sur la carte
+=> mettre timer en route
+
+Total (nombre de points gagnés) initialisé à 0
+chaque personnage est initialisé avec un new state 
+
+cliquer sur chaque personnage pour déclencher l'interation
+text de présentation du perso, bouton "commencer l'interaction" ou "revenir à la page d'accueil"
+
+
+Quand l'interaction commence, state isContacted => true
+appliquer fonction showText
+Si choix random excuse => setstate isPissed => true
+si interaction se termine => si stateisConvicend true => ajouter points au Total
+
+=> si nombre de points max atteint, victoire
+
+=> si timer atteint, calcul score random du maire et comparer avec Total
+=> win/loose/tie
+=> si tie, checker si certains personnages sont 'isPissed = true' => decrement le Total
+          checker si tous les personnages sont isContacted => increment le Total
+          sinon pile ou face

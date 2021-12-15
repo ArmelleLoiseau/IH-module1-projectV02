@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+/*  RESET */
+body {
+    margin: 0;
+    padding: O;
+    box-sizing: border-box;
+    position:absolute;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HOME */
+.main-container {
+    position: relative;
+    background-image: url("../project1-game/media/visuels/map-paris.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.start-interaction-btn, #player, #clock{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #FFFFF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    font-family: Roboto, sans-serif;
+    font-size: 1.8rem;
+}
+
+#josiane-btn {
+    grid-column: 1/2;
+    grid-row: 1/2
+}
+#jeanpierre-btn{
+    grid-column: 2/3;
+    grid-row: 1/2
+}
+#alimatou-btn{
+    grid-column: 3/4;
+    grid-row: 1/2
+}
+
+#samira-btn {
+    grid-column: 1/2;
+    grid-row: 2/3
+}
+
+#karim-btn {
+    grid-column: 2/3;
+    grid-row: 3/4
+}
+
+#bernard-btn{
+    grid-column: 1/2;
+    grid-row: 3/4
+}
+#william-btn {
+    grid-column: 3/4;
+    grid-row: 2/3
+}
+
+#player {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#clock {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    font-size: 2rem;;
+}
+
+#footer-main {
+    background-color: #FFFFF7;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    }
+
+/* POP UP */
+.is-visible {
+    width: 75vw;
+    border: 1px solid black;
+    margin: auto;
+    z-index: 1;
+    padding-top: 25vh;
+    position:absolute;
+    background-color: #FFFFF7;
+}
+
+
+/* RESULTS */
+#display-results {
+    height: 200px;
+    width: 200px;
+    font-family: roboto, sans-serif;
+    background-color: #FFFFF7;
+    margin: auto;
+}
+
+/* CHARACTER PAGE */
+.global-container {
+    display: flex;
+    flex-direction: columN;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+
+}
+.answer-text-container {
+    text-align: center;
+}
+
+#show-option-btns {
+    width: 500px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./js/dialogue.js"></script>
+    <!-- <script type="module" src='./js/chrono/chrono-index.js'></script> -->
+    <script type="module" src="./js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a3d15773c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Team spirit</title>
+  </head>
+  <body>
+    <div id="pop-up" class="is-visible">
+      <div id="text-container">
+        <h1>Team Spirit</h1>
+        <p>Connaissez-vous vos voisins ? En avez-vous vraiment envie ? </br>Face à l'incurie des autorités qui laissent le quartier partir à la dérive, il faut se rassembler. </br> Plus vous serez nombreux, plus vous aurez de poids face au Maire. </br> Il va falloir convaincre <strong>chacun</strong> de vos voisins du bien fondé de votre entreprise...</p>
+        <button id="play">Commencer à jouer</button>
+      </div>
+    </div>
+    <div class="main-container">
+      <div id="josiane-btn" class="start-interaction-btn">
+        <i class="fas fa-smile-beam"></i>
+        <a href="./interactions/josiane.html">Josiane</a>
+      </div>
+      <div id="jeanpierre-btn" class="start-interaction-btn">
+        <i class="fas fa-briefcase"></i>
+        <a href="./interactions/jeanpierre.html">Jean-Pierre</a>
+      </div>
+      <div id="alimatou-btn" class="start-interaction-btn">
+        <i class="fas fa-people-carry"></i>
+        <a href="./interactions/Alimatou.html">Alimatou</a>
+      </div>
+      <div id="samira-btn" class="start-interaction-btn">
+        <i class="fas fa-fist-raised"></i>
+        <a href="./interactions/samira.html">Samira</a>
+      </div>
+      <div id="karim-btn" class="start-interaction-btn">
+        <i class="fas fa-road"></i>
+        <a href="./interactions/karim.html">Karim</a>
+      </div>
+      <div id="bernard-btn" class="start-interaction-btn">
+        <i class="fas fa-angry"></i>
+        <a href="./interactions/bernard.html">Bernard</a>
+      </div>
+      <div id="william-btn" class="start-interaction-btn">
+        <i class="fas fa-running"></i>
+        <a href="./interactions/william.html">William</a>
+      </div>
+      <div id="player"><i class="fas fa-street-view"></i></div>
+      <!-- <div id="clock">
+        <i class="fas fa-bell"></i>
+        <span id="minDec" class="number">0</span>
+        <span id="minUni" class="number">0</span>
+        <span>:</span>
+        <span id="secDec" class="number">0</span>
+        <span id="secUni" class="number">0</span>
+      </div> -->
+      <div id="display-result">
+        <button id="check-result">Compter mes forces</button>
+      </div>
+    </div>
+    <div class="reset-container">
+      <button id="reset">Recommencer une partie</button>
+    </div>
+    <footer id="footer-main">
+      <i id="sound-btn" class="fas fa-volume-up"></i>
+      <audio
+        class="audio"
+        src="./media/sounds/Carrefour-rue-et-route.wav"
+        class="ambiantSound"
+      ></audio>
+    </footer>
+  </body>
+</html>
