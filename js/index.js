@@ -148,21 +148,37 @@ function showTextNode(textNodeIndex) {
   const options = textNode.options;
 
   // display each option's text on the button and add a click event
-  options.forEach((option) => {
-    const optionBtnElement = document.createElement("button");
-    optionBtnElement.className = "option-btn";
-    if (option.nextText) {
-      optionBtnElement.innerHTML = `${option.text}`;
-    } else {
-      optionBtnElement.innerHTML = `<a href ="../index.html">${option.text}</a>`;
-    }
-    optionBtnsContainer.appendChild(optionBtnElement);
-    optionBtnElement.addEventListener("click", () => {
-      updateStates();
-      optionInput(option);
+  const timeOutId = setTimeout(() => {
+    options.forEach((option) => {
+      const optionBtnElement = document.createElement("button");
+      optionBtnElement.className = "option-btn";
+      if (option.nextText) {
+        optionBtnElement.innerHTML = `${option.text}`;
+      } else {
+        optionBtnElement.innerHTML = `<a href ="../index.html">${option.text}</a>`;
+      }
+      optionBtnsContainer.appendChild(optionBtnElement);
+      optionBtnElement.addEventListener("click", () => {
+        updateStates();
+        optionInput(option);
+      });
     });
-  });
+  }, 5000);
 }
+
+// TYPEWRITER
+// let i = 0;
+// var speed = 30; /* The speed/duration of the effect in milliseconds */
+
+// function typeWriter() {
+//   if (i < textNode.text.length) {
+//     lineElement.innerHTML += textNode.text.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// }
+
+// typeWriter();
 
 // LISTEN TO THE INPUT FROM PLAYER TO DISPLAY NEXT INTERACTION
 function optionInput(option) {
@@ -181,7 +197,9 @@ function optionInput(option) {
       Object.assign(currentState[change.target], change.value);
     });
   }
-  randomExcuseBtn();
+  const timeOutId = setTimeout(() => {
+    randomExcuseBtn();
+  }, 5000);
 }
 
 // RANDOM EXCUSE BUTTON
@@ -310,11 +328,13 @@ function getResult() {
 }
 
 // TO DO
-// check bugs in interactions
+// check html syntax
 // display sentences one after the other + settimeout for button
-// Sounds: loop, different one for each page
+// style the ugly alert box
+// change color of icons based on their states
+// have personalized background image for each character
 // Make the player icon follow the cursor :
-// shttps://stackoverflow.com/questions/31370624/how-do-you-make-an-image-follow-your-mouse-pointer-using-jquery
+// https://stackoverflow.com/questions/31370624/how-do-you-make-an-image-follow-your-mouse-pointer-using-jquery
 
 // typemachine effect ***************
 // let i = 0;
@@ -329,4 +349,3 @@ function getResult() {
 // }
 
 // typeWriter();
-// export { displayResult };

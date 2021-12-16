@@ -28,7 +28,7 @@ const textNodes = [
   },
   {
     id: `1`,
-    text: `Alors comme ça vous voulez rassembler les habitants du quartier ? Je le connais bien moi le quartier vous-savez, j'y habite depuis 40 ans...`,
+    text: `Alors comme ça vous voulez rassembler les habitants du quartier ? Je le connais bien moi le quartier vous savez, j'y habite depuis 40 ans...`,
     options: [{ text: `Mmm...`, nextText: `2` }],
   },
   {

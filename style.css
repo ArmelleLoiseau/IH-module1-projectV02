@@ -19,7 +19,7 @@ a {
 /* HOME */
 .main-container {
     position: relative;
-    background-image: url("../project1-game/media/visuels/map-paris.jpg");
+    background-image: url("./media/visuels/map-paris.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
@@ -85,7 +85,14 @@ a {
     align-items: center;
     justify-self: center;
     align-self: center;
-    gap: 20px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+#bottom-btns button {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 #josiane-btn {
@@ -125,10 +132,6 @@ a {
     grid-row: 2 / 3;
 }
 
-#clock {
-    display: flex;
-    flex-direction: row;
-}
 
 footer {
     font-size: 2rem;;
@@ -167,8 +170,12 @@ footer {
     background-color: rgb(255,255,247);
     top: 260px;
     /* left: 200px; */
-    border: 8px solid rgba(0,0,0,0.9);
+    border: 8px solid rgb(0,0,0);
     text-align: center;
+}
+
+.display-popups button {
+    cursor: pointer;
 }
 
 #play {
@@ -214,7 +221,7 @@ footer {
     margin: 20px;
     border-radius: 20px;
     padding: 10px;
-}
+} 
 
 #show-option-btns {
     display: flex;
@@ -236,7 +243,6 @@ footer {
     padding: 10px;
     cursor: pointer;
     background-color: rgba(255,255,247, 0.8);
-
 }
 
 .go-home {
