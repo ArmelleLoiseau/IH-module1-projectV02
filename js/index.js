@@ -203,7 +203,7 @@ function randomExcuseBtn() {
   const btnsContainerElement = document.querySelector("#show-option-btns");
   const randomExcuseBtn = document.createElement("button");
   randomExcuseBtn.className = "random-excuse";
-  randomExcuseBtn.innerHTML = "Générer une excuse bidon et fuire";
+  randomExcuseBtn.innerHTML = "Générer une excuse bidon et fuir";
   btnsContainerElement.appendChild(randomExcuseBtn);
   randomExcuseBtn.addEventListener("click", () => {
     displayExcuse();
