@@ -112,6 +112,16 @@ const textNodes = [
       {
         text: `Super, alors on se tient au courant, à très bientôt !`,
         changeState: [{ target: "josiane", value: { isConvinced: true } }],
+        nextText: `9.a.1`,
+      },
+    ],
+  },
+  {
+    id: `9.a.1`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -132,6 +142,16 @@ const textNodes = [
       {
         text: `Super, alors on se tient au courant, à très bientôt !`,
         changeState: [{ target: "josiane", value: { isConvinced: true } }],
+        nextText: `10.a`,
+      },
+    ],
+  },
+  {
+    id: `10.a`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -208,6 +228,16 @@ const textNodes = [
       {
         text: `Super, on a hâte de se mettre au travail ! A très bientôt !`,
         changeState: [{ target: "samira", value: { isConvinced: true } }],
+        nextText: `106.b.1`,
+      },
+    ],
+  },
+  {
+    id: `106.b.1`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -258,7 +288,17 @@ const textNodes = [
       {
         text: `Super, on a hâte de se mettre au travail ! A très bientôt !`,
         changeState: [{ target: "samira", value: { isConvinced: true } }],
-        changeState: [{ target: "samira", value: { bringsFriends: true } }],
+        // changeState: [{ target: "samira", value: { bringsFriends: true } }],
+        nextText: `155.a.1`,
+      },
+    ],
+  },
+  {
+    id: `155.a.1`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -300,6 +340,16 @@ const textNodes = [
       {
         text: `Super nouvelle, on se revoit très bientôt alors !`,
         changeState: [{ target: "samira", value: { isConvinced: true } }],
+        nextText: `157.b.2`,
+      },
+    ],
+  },
+  {
+    id: `157.b.2`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -395,6 +445,16 @@ const textNodes = [
       {
         text: `Je... Bon bah merci, et... Ah bah il est déjà reparti...`,
         changeState: [{ target: "william", value: { isConvinced: true } }],
+        nextText: `205.a.1`,
+      },
+    ],
+  },
+  {
+    id: `205.a.1`,
+    text: `Bruits de pas qui s'éloignent rapidement...`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -494,6 +554,16 @@ const textNodes = [
       {
         text: `C'est noté, je vous compte parmis nous ! Bonne journée monsieur!`,
         changeState: [{ target: "bernard", value: { isConvinced: true } }],
+        nextText: `307.a`,
+      },
+    ],
+  },
+  {
+    id: `307.a`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -758,6 +828,16 @@ const textNodes = [
       {
         text: `C'est garanti ! Alors on compte sur vous ! A bientôt!`,
         changeState: [{ target: "alimatou", value: { isConvinced: true } }],
+        nextText: `508.a.1`,
+      },
+    ],
+  },
+  {
+    id: `508.a.1`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -782,10 +862,21 @@ const textNodes = [
       {
         text: `De rien, ça m'a fait du bien ce petit effort physique! A très vite!`,
         changeState: [{ target: "alimatou", value: { isConvinced: true } }],
+        nextText: `509.a`,
       },
       {
         text: `Pas de soucis. Et c'est noté pour la chemisette. A bientôt !`,
         changeState: [{ target: "alimatou", value: { isConvinced: true } }],
+        nextText: `509.a`,
+      },
+    ],
+  },
+  {
+    id: `509.a`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -833,6 +924,16 @@ const textNodes = [
       {
         text: `Parfait, je te laisse retourner à tes gamins alors, et à très vite.`,
         changeState: [{ target: "karim", value: { isConvinced: true } }],
+        nextText: `601.a.1`,
+      },
+    ],
+  },
+  {
+    id: `601.a.1`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },
@@ -850,6 +951,16 @@ const textNodes = [
       {
         text: `Merci pour les conseils... Et à bientôt !`,
         changeState: [{ target: "karim", value: { isConvinced: true } }],
+        nextText: `602.a`,
+      },
+    ],
+  },
+  {
+    id: `602.a`,
+    text: `A bientôt !`,
+    options: [
+      {
+        text: `Revenir à la page d'accueil`,
       },
     ],
   },

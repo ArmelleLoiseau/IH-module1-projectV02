@@ -175,11 +175,15 @@ function optionInput(option) {
   }
   showTextNode(textNodeIndex);
   updateStates();
+
   // Modify the states based on the option chosen and impact the icons on the home page
   if (option.changeState) {
     const changeArr = option.changeState;
 
     changeArr.forEach((change) => {
+      console.log("the target is :", currentState[change.target]);
+      console.log("-------");
+      console.log("the state is :", change.value);
       Object.assign(currentState[change.target], change.value);
     });
   }
@@ -266,15 +270,13 @@ function countContacts() {
     getResult();
   } else {
     characters.forEach((character) => {
-      const iconsElements = document.querySelectorAll(".start-interaction-btn");
-      console.log(currentState);
-      console.log(iconsElements);
-      if (currentState[currentState.character][3]) {
-        iconsElements.classList.contains("character").add("isPissed");
-      } else if (currentState[currentState.character][2]) {
-        iconsElements.classList.contains("character").add("isConvinced");
-      } else if (currentState[currentState.character][0]) {
-        iconsElements.classList.contains("character").add("isContacted");
+      const iconElement = document.querySelector(`.${character}`);
+      if (currentState[character].isPissed) {
+        iconElement.classList.add("isPissed");
+      } else if (currentState[character].isConvinced) {
+        iconElement.classList.add("isConvinced");
+      } else if (currentState[character].isContacted) {
+        iconElement.classList.add("isContacted");
       }
     });
   }
@@ -321,15 +323,10 @@ function getResult() {
     resultsTextElement.textContent =
       "On dirait que vous vous êtes attaqués à un trop gros poisson... Perdu ! Commencez peut-être par mettre de l'ordre dans votre vie ?";
   }
-  console.log(resultsTextElement);
 }
 
 // TO DO
-// check html syntax
 // display sentences one after the other
-// style the ugly alert box
-// change color of icons based on their states
-// have personalized background image for each character
 // Make the player icon follow the cursor :
 // https://stackoverflow.com/questions/31370624/how-do-you-make-an-image-follow-your-mouse-pointer-using-jquery
 
