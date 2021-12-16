@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
     position:absolute;
     font-family: roboto, sans-serif;
-    font-size: 10px;
+    font-size: 5px;
 }
 
 a {
@@ -184,8 +184,8 @@ footer {
     font-size: 1.5rem;
     background-color: rgb(255,255,247);
     top: 160px;
-    /* left: 200px; */
-    border: 8px solid rgb(0,0,0);
+    border-top: 8px solid rgb(0,0,0);
+    border-bottom: 8px solid rgb(0,0,0);
     text-align: center;
 }
 
