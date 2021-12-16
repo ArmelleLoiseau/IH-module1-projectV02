@@ -115,7 +115,6 @@ if (!window.location.href.includes("index.html")) {
   retrieveStates();
 
   // logic to display a different text if the player has already talked to a character
-  // ***** BROKEN ****
   const characterStates = Object.values(currentState[character]);
   console.log(characterStates[3]);
 
@@ -163,7 +162,7 @@ function showTextNode(textNodeIndex) {
         optionInput(option);
       });
     });
-  }, 5000);
+  }, 1000);
 }
 
 // LISTEN TO THE INPUT FROM PLAYER TO DISPLAY NEXT INTERACTION
@@ -176,16 +175,17 @@ function optionInput(option) {
   }
   showTextNode(textNodeIndex);
   updateStates();
-  // Modify the states based on the option chosen
+  // Modify the states based on the option chosen and impact the icons on the home page
   if (option.changeState) {
     const changeArr = option.changeState;
+
     changeArr.forEach((change) => {
       Object.assign(currentState[change.target], change.value);
     });
   }
   const timeOutId = setTimeout(() => {
     randomExcuseBtn();
-  }, 5000);
+  }, 1000);
 }
 
 // RANDOM EXCUSE BUTTON
@@ -265,7 +265,18 @@ function countContacts() {
   if (contacted.length === characters.length) {
     getResult();
   } else {
-    alert("Bien tenté, mais tu as encore du boulot");
+    characters.forEach((character) => {
+      const iconsElements = document.querySelectorAll(".start-interaction-btn");
+      console.log(currentState);
+      console.log(iconsElements);
+      if (currentState[currentState.character][3]) {
+        iconsElements.classList.contains("character").add("isPissed");
+      } else if (currentState[currentState.character][2]) {
+        iconsElements.classList.contains("character").add("isConvinced");
+      } else if (currentState[currentState.character][0]) {
+        iconsElements.classList.contains("character").add("isContacted");
+      }
+    });
   }
 }
 

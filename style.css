@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
     position:absolute;
     font-family: roboto, sans-serif;
-    font-size: 20px;
+    font-size: 10px;
 }
 
 a {
@@ -133,6 +133,17 @@ a {
     grid-row: 2 / 3;
 }
 
+.isPissed {
+    background-color: orangered;
+}
+
+.isContacted {
+    background-color: steelblue;
+}
+
+.isConvinced {
+    background-color: greenyellow;
+}
 
 footer {
     font-size: 2rem;;
