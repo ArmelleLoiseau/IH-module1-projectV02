@@ -188,14 +188,11 @@ function optionInput(option) {
   // Modify the states based on the option chosen and impact the icons on the home page
   if (option.changeState) {
     const changeArr = option.changeState;
-
     changeArr.forEach((change) => {
-      console.log("the target is :", currentState[change.target]);
-      console.log("-------");
-      console.log("the state is :", change.value);
       Object.assign(currentState[change.target], change.value);
     });
   }
+
   const timeOutId = setTimeout(() => {
     randomExcuseBtn();
   }, 1000);

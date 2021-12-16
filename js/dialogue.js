@@ -19,7 +19,7 @@ const textNodes = [
     text: `75 ans et plus toutes ses dents, Josiane est une historique. Ne lui dites pas, ça va la vexer. N'empêche que si vous voulez en savoir plus sur le quartier, ça vaut le coup de papoter avec elle.`,
     options: [
       {
-        text: `Entammer la conversation`,
+        text: `Entamer la conversation`,
         changeState: [{ target: "josiane", value: { isContacted: true } }],
         nextText: `1`,
       },
@@ -160,7 +160,7 @@ const textNodes = [
     text: `Elle en a gros, Samira. Le bailleur social qui fait semblant de ne pas voir que l'immeuble tombe en ruines, les seringues des camés dans son hall d'escalier, et puis tout le reste. Elle est fatiguée aussi, Samira, fatiguée de batailler...`,
     options: [
       {
-        text: `Entammer la conversation`,
+        text: `Entamer la conversation`,
         nextText: `101`,
         changeState: [{ target: "samira", value: { isContacted: true } }],
       },
@@ -387,7 +387,7 @@ const textNodes = [
     text: `Baskets en cuir éthique, barbe taillée par un professionel, montre connectée. William ressemble à tous ces habitants venus depuis quelques années profiter des faibles loyers du quartier. N'empêche que c'est un habitant du quartier, lui aussi... Vous l'interrompez dans son footing ?`,
     options: [
       {
-        text: `Entammer la conversation`,
+        text: `Entamer la conversation`,
         nextText: `200`,
         changeState: [{ target: "william", value: { isContacted: true } }],
       },
@@ -487,7 +487,7 @@ const textNodes = [
     text: `Depuis l'extérieur du Balto, vous le voyez accoudé au comptoir, Paris-Turf sous le bras. Il vous semble l'avoir déjà vu foutre le bordel à un conseil de quartier.. C'est pas lui qui avait traité la conseillère écologiste d'islamo-gauchiasse déjà ? Bon, vous entrez ou pas ?`,
     options: [
       {
-        text: `Entammer la conversation`,
+        text: `Entamer la conversation`,
         changeState: [{ target: "bernard", value: { isContacted: true } }],
         nextText: `300`,
       },
@@ -581,7 +581,7 @@ const textNodes = [
     text: `Vous avez rendez-vous dans les bureaux de "couleurs solidaires", l'une des grosses assos du quartier. Son directeur, Jean-Pierre, est à toutes les réunions, tous les évènements, tous les pots. Vous l'avez vu 100 fois, mais vous n'avez jamais pu échanger plus de deux mots avec lui. Du coup, allez savoir quel genre de type c'est...`,
     options: [
       {
-        text: `Entammer la conversation`,
+        text: `Entamer la conversation`,
         nextText: `400`,
         changeState: [{ target: "jeanpierre", value: { isContacted: true } }],
       },
@@ -693,7 +693,7 @@ const textNodes = [
     text: `Ca fait cinq minutes que vous observez la scène de l'exterieur, et vous hésitez toujours à pousser la porte. On vous a parlé d'Alimatou et de son association de familles hébergées en foyer. Mais c'est-à-dire que là, elle court avec des cartons dans les bras. C'est vraiment le bon moment ?`,
     options: [
       {
-        text: `Entammer la conversation`,
+        text: `Entamer la conversation`,
         nextText: `500`,
         changeState: [{ target: "alimatou", value: { isContacted: true } }],
       },
@@ -885,7 +885,7 @@ const textNodes = [
     text: `Barbe de cinq jours et bonnet vissé sur le crane, c'est le gars que tout le monde connaît. Normal, il est éduc de rue Karim. Si vous le connaissez pas, lui vous connaît. Il connaît tout le monde.`,
     options: [
       {
-        text: `Entammer la conversation`,
+        text: `Entamer la conversation`,
         nextText: `600`,
         changeState: [{ target: "karim", value: { isContacted: true } }],
       },
