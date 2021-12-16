@@ -1,19 +1,19 @@
 const textNodes = [
-  // {
-  //   id: `isPissed`,
-  //   text: `Ca sera quoi cete fois-ci ? La manucure du hamster ? Fichez-moi le camp !`,
-  //   options: [{ text: `Vous vous attendiez à quoi ?` }],
-  // },
-  // {
-  //   id: `isConvinced`,
-  //   text: `Vous revoilà vous ? Et alors cette coalition, on est où ? Ca avance drolement lentement on dirait.`,
-  //   options: [{ text: `Faites profil bas` }],
-  // },
-  // {
-  //   id: `isContacted`,
-  //   text: `Et puis quoi encore? Je vous ai déjà dit non, ça commence à bien faire ! Non c'est non !`,
-  //   options: [{ text: `La prochaine fois, évitez` }],
-  // },
+  {
+    id: `isPissed`,
+    text: `Ca sera quoi cete fois-ci ? La manucure du hamster ? Fichez-moi le camp !`,
+    options: [{ text: `Vous vous attendiez à quoi ?` }],
+  },
+  {
+    id: `isConvinced`,
+    text: `Vous revoilà vous ? Et alors cette coalition, on est où ? Ca avance drolement lentement on dirait.`,
+    options: [{ text: `Faites profil bas` }],
+  },
+  {
+    id: `isContacted`,
+    text: `Vous commencez à devenir insistant... `,
+    options: [{ text: `La prochaine fois, évitez` }],
+  },
   {
     id: `josiane`,
     text: `75 ans et plus toutes ses dents, Josiane est une historique. Ne lui dites pas, ça va la vexer. N'empêche que si vous voulez en savoir plus sur le quartier, ça vaut le coup de papoter avec elle.`,
@@ -212,12 +212,12 @@ const textNodes = [
     ],
   },
   {
-    id: `Samira.isIntroduced`,
+    id: `samira.isIntroduced`,
     text: `Bonjour ! Alors c'est vous, le projet de coalition citoyenne... Josiane m'en a un peu parlé...`,
     options: [
       {
         text: `Oui, et il faut qu'on soit vraiment nombreux si on veut que ça marche !`,
-        nextText: `151`,
+        nextText: `152`,
       },
     ],
   },

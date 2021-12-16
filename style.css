@@ -6,11 +6,13 @@ body {
     padding: O;
     box-sizing: border-box;
     position:absolute;
+    font-family: roboto, sans-serif;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -25,21 +27,65 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    /* cursor: url("./media/visuels/map-pin-solid.svg"), pointer; */
 }
 
-.start-interaction-btn, #player, #clock{
+.start-interaction-btn, #player {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #FFFFF7;
+    background-color: rgba(255,255,247, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     justify-self: center;
     align-self: center;
-    font-family: Roboto, sans-serif;
+    font-size: 6rem;
+    border: 8px solid rgba(0,0,0,0.9);
+    position: relative;
+}
+/* hover effect on icons */
+
+.overlay {
+    border: 8px solid rgba(0,0,0,0.9);
+    border-radius: 50%;
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgb(255,255,247);
     font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight:900;
+}
+
+.start-interaction-btn:hover .overlay {
+    opacity: 1;
+}
+
+#display-result, .reset-container{
+    border: 8px solid rgba(0,0,0,0.9);
+    background-color: rgba(255,255,247, 0.8);
+    border-radius: 15px;
+}
+
+#bottom-btns {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    gap: 20px;
 }
 
 #josiane-btn {
@@ -89,23 +135,39 @@ footer {
 }
 
 #footer-main {
+    padding: 0;
     background-color: #FFFFF7;
     height: 5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 15px;
+    font-size: 1rem;
     }
+
+#sound{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+#sound-btn {
+    position: relative;
+    top: 17px;
+}
 
 /* POP UP */
 .is-visible {
-    width: 75vw;
+    width: 100vw;
     border: 1px solid black;
-    margin: auto;
     z-index: 1;
-    padding-top: 25vh;
+    padding: 40px;
     position:absolute;
-    background-color: #FFFFF7;
+    background-color: rgb(255,255,247);
+    top: 260px;
+    /* left: 200px; */
+    border: 8px solid rgba(0,0,0,0.9);
+    text-align: center;
 }
 
 
@@ -114,30 +176,59 @@ footer {
     height: 200px;
     width: 200px;
     font-family: roboto, sans-serif;
-    background-color: #FFFFF7;
+    background-color:rgba(255,255,247, 0.8);
     margin: auto;
 }
 
 /* CHARACTER PAGE */
 .global-container {
     display: flex;
-    flex-direction: columN;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80vw;
-
+    background-image: url("./media/visuels/map-paris-darker.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    width: 100vw;
 }
+
 .answer-text-container {
     text-align: center;
+    color: #FFFFF7;
+    font-size: 2em;
+    background-color: rgba(0,0,0,0.8);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
-#show-option-btns {
-    width: 500px;
+#random-excuse-container {
+    text-align: center;
+    color: rgb(255,255,247);
+    font-size: 2em;
+    font-weight: bold;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .input-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    width: 60vw;
+    height: 60px;
+}
+
+#show-option-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 
 

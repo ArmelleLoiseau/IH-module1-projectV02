@@ -23,34 +23,34 @@
       </div>
     </div>
     <div class="main-container">
-      <div id="josiane-btn" class="start-interaction-btn">
+      <a href="./interactions/josiane.html" id="josiane-btn" class="start-interaction-btn">
         <i class="fas fa-smile-beam"></i>
-        <a href="./interactions/josiane.html">Josiane</a>
-      </div>
-      <div id="jeanpierre-btn" class="start-interaction-btn">
+        <p class="overlay">Parler avec Josiane</p>
+      </a>
+      <a href="./interactions/jeanpierre.html" id="jeanpierre-btn" class="start-interaction-btn">
         <i class="fas fa-briefcase"></i>
-        <a href="./interactions/jeanpierre.html">Jean-Pierre</a>
-      </div>
-      <div id="alimatou-btn" class="start-interaction-btn">
+        <p class="overlay">Parler avec Jean-Pierre</p>
+      </a>
+      <a href="./interactions/Alimatou.html" id="alimatou-btn" class="start-interaction-btn">
         <i class="fas fa-people-carry"></i>
-        <a href="./interactions/Alimatou.html">Alimatou</a>
-      </div>
-      <div id="samira-btn" class="start-interaction-btn">
+        <p class="overlay">Parler avec Alimatou</p>
+      </a>
+      <a href="./interactions/samira.html" id="samira-btn" class="start-interaction-btn">
         <i class="fas fa-fist-raised"></i>
-        <a href="./interactions/samira.html">Samira</a>
-      </div>
-      <div id="karim-btn" class="start-interaction-btn">
+        <p class="overlay">Parler avec Samira</p>
+      </a>
+      <a href="./interactions/karim.html" id="karim-btn" class="start-interaction-btn">
         <i class="fas fa-road"></i>
-        <a href="./interactions/karim.html">Karim</a>
-      </div>
-      <div id="bernard-btn" class="start-interaction-btn">
+        <p class="overlay">Parler avec Karim</p>
+      </a>
+      <a href="./interactions/bernard.html" id="bernard-btn" class="start-interaction-btn">
         <i class="fas fa-angry"></i>
-        <a href="./interactions/bernard.html">Bernard</a>
-      </div>
-      <div id="william-btn" class="start-interaction-btn">
+        <p class="overlay">Parler avec Bernard</p>
+      </a>
+      <a href="./interactions/william.html" id="william-btn" class="start-interaction-btn">
         <i class="fas fa-running"></i>
-        <a href="./interactions/william.html">William</a>
-      </div>
+        <p class="overlay">Parler avec William</p>
+      </a>
       <div id="player"><i class="fas fa-street-view"></i></div>
       <!-- <div id="clock">
         <i class="fas fa-bell"></i>
@@ -60,20 +60,27 @@
         <span id="secDec" class="number">0</span>
         <span id="secUni" class="number">0</span>
       </div> -->
+    <div id="bottom-btns">
       <div id="display-result">
         <button id="check-result">Compter mes forces</button>
+        </div>
+      <div class="reset-container">
+        <button id="reset">Recommencer une partie</button>
       </div>
     </div>
-    <div class="reset-container">
-      <button id="reset">Recommencer une partie</button>
     </div>
     <footer id="footer-main">
-      <i id="sound-btn" class="fas fa-volume-up"></i>
-      <audio
+      <div id="sound">
+        <i id="sound-btn" class="fas fa-volume-up">
+        </i>
+        <p>Son d'ambiance on/off</p>
+      </div>
+      <audio loop
         class="audio"
         src="./media/sounds/Carrefour-rue-et-route.wav"
         class="ambiantSound"
       ></audio>
+      <p>Copyrights and stuff...</p>
     </footer>
   </body>
 </html>

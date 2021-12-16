@@ -15,13 +15,18 @@ const characters = [
   "alimatou",
 ];
 
-// INITIALIZE THE GAME (RESET STATES AND START TIMER) ------------ TO BE FIXED ------------
+// INITIALIZE THE GAME (RESET STATES, RELOAD PAGE AND ERASE PREVIOUS RESULTS)
 let initialSates = states;
 if (window.location.href.includes("index.html")) {
   let resetBtnElement = document.querySelector("#reset");
   resetBtnElement.addEventListener("click", () => {
     localStorage.setItem("currentStates", JSON.stringify(states));
     localStorage.removeItem("popUp", JSON.stringify(popupBoxElement));
+    window.location.reload();
+    if (document.querySelector("#check-result").children) {
+      let resultsDisplay = document.querySelector(".results-text");
+      resultsDisplay.innerHTML = "";
+    }
     // localStorage.removeItem("time", JSON.stringify(chronometer));
     // chronometer.currentTime = 900;
     // chronometer.start();
@@ -30,7 +35,7 @@ if (window.location.href.includes("index.html")) {
 
 // LOCAL STORAGE (KEEP TRACK OF CHANGES IN STATES)
 
-let currentState = {};
+let currentState = { ...states };
 
 function updateStates() {
   localStorage.setItem("currentStates", JSON.stringify(currentState));
@@ -112,13 +117,19 @@ if (!window.location.href.includes("index.html")) {
   const container = document.querySelector(".answer-text-container");
   const character = container.getAttribute("id");
   retrieveStates();
-  // if (currentState[character].isPissed) showTextNode("isPissed");
-  // else if (currentState[character].isContacted) showTextNode("isContacted");
-  // else if (currentState[character].isConvinced) showTextNode("isConvinced");
-  // else if (currentState[character].isIntroduced) {
-  //   showTextNode(`${character}.isIntroduced`);
-  // } else
-  showTextNode(character);
+
+  // logic to display a different text if the player has already talked to a character
+  // ***** BROKEN ****
+  const characterStates = Object.values(currentState[character]);
+  console.log(characterStates[3]);
+
+  if (characterStates[3]) showTextNode("isPissed");
+  else if (characterStates[2]) showTextNode("isConvinced");
+  else if (characterStates[1]) {
+    console.log(character + `.isIntroduced`);
+    showTextNode(character + `.isIntroduced`);
+  } else if (characterStates[0]) showTextNode("isContacted");
+  else showTextNode(character);
 }
 
 // DISPLAY THE INTERACTION WITH CHARACTERS
@@ -132,13 +143,13 @@ function showTextNode(textNodeIndex) {
     ".answer-text-container"
   );
   const lineElement = document.querySelector("#character-line");
+  lineElement.innerHTML = textNode.text;
   answerContainerElement.appendChild(lineElement);
 
   // display the options' buttons
   const optionBtnsContainer = document.querySelector("#show-option-btns");
   optionBtnsContainer.innerHTML = "";
   const options = textNode.options;
-  console.log(options);
 
   // display each option's text on the button and add a click event
   options.forEach((option) => {
@@ -146,9 +157,8 @@ function showTextNode(textNodeIndex) {
     optionBtnElement.className = "option-btn";
     if (option.nextText) {
       optionBtnElement.innerHTML = `${option.text}`;
-      lineElement.innerHTML = textNode.text;
     } else {
-      optionBtnElement.innerHTML = `<div id="show-option-btns"><a href ='../index.html'>${option.text}</a></div>`;
+      optionBtnElement.innerHTML = `<a href ="../index.html">${option.text}</a>`;
     }
     optionBtnsContainer.appendChild(optionBtnElement);
     optionBtnElement.addEventListener("click", () => {
@@ -156,13 +166,15 @@ function showTextNode(textNodeIndex) {
       optionInput(option);
     });
   });
-  console.log(currentState);
 }
 
 // LISTEN TO THE INPUT FROM PLAYER TO DISPLAY NEXT INTERACTION
 function optionInput(option) {
   const textNodeIndex = option.nextText;
 
+  if (!option.nextText) {
+    return;
+  }
   showTextNode(textNodeIndex);
   updateStates();
   // Modify the states based on the option chosen
@@ -228,6 +240,7 @@ function makeEnnemy() {
 const musicBtnElement = document.querySelector("#sound-btn");
 musicBtnElement.addEventListener("click", playPause);
 const audio = document.querySelector(".audio");
+// audio.loop = true;
 
 function playPause() {
   if (audio.paused) audio.play();
@@ -290,20 +303,18 @@ function getResult() {
       "Bravo, votre coalition est formée ! Vous êtes désoramis la bête noire des autorités";
   } else {
     resultsTextElement.textContent =
-      "On dirait que vous vous êtes attaqués à un trop gros poisson... Commencez peut-être par mettre de l'ordre dans votre vie ?";
+      "On dirait que vous vous êtes attaqués à un trop gros poisson... Perdu ! Commencez peut-être par mettre de l'ordre dans votre vie ?";
   }
-  console.log(resultsContainerElement);
 }
 
 // TO DO
 // check bugs in interactions
-// make sure the end game logic works
 // display sentences one after the other + settimeout for button
-// Sounds: loop, one for each page
-// REFACTOR... Initalize const in the global scope, refactor the showtextnode function
-// style, sound, responsive, fonts, img...
+// Sounds: loop, different one for each page
+// Make the player icon follow the cursor :
+// shttps://stackoverflow.com/questions/31370624/how-do-you-make-an-image-follow-your-mouse-pointer-using-jquery
 
-// typemachine effect *************** BROKEN
+// typemachine effect ***************
 // let i = 0;
 // var speed = 30; /* The speed/duration of the effect in milliseconds */
 
