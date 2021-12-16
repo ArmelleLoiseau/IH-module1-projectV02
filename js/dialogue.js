@@ -1,7 +1,7 @@
 const textNodes = [
   {
     id: `isPissed`,
-    text: `Ca sera quoi cete fois-ci ? La manucure du hamster ? Fichez-moi le camp !`,
+    text: `Ca sera quoi cette fois-ci ? La manucure du hamster ? Fichez-moi le camp !`,
     options: [{ text: `Vous vous attendiez à quoi ?` }],
   },
   {
@@ -11,8 +11,8 @@ const textNodes = [
   },
   {
     id: `isContacted`,
-    text: `Vous commencez à devenir insistant... `,
-    options: [{ text: `La prochaine fois, évitez` }],
+    text: `Encore vous ?? Vous commencez à devenir insistant... Non, c'est non, comment il faut vous le dire ? `,
+    options: [{ text: `La prochaine fois, passez votre chemin` }],
   },
   {
     id: `josiane`,
@@ -137,7 +137,7 @@ const textNodes = [
   },
   {
     id: `samira`,
-    text: `Elle en a gros, Samira. Le bailleur social qui fait semblant de ne pas voir que l'immeuble tombe en ruines, les seringues des camés dans son hall d'escalier, et puis tout le reste. Elle est fatiguée aussi, Samira, fatiguée de batailer...`,
+    text: `Elle en a gros, Samira. Le bailleur social qui fait semblant de ne pas voir que l'immeuble tombe en ruines, les seringues des camés dans son hall d'escalier, et puis tout le reste. Elle est fatiguée aussi, Samira, fatiguée de batailler...`,
     options: [
       {
         text: `Entammer la conversation`,

@@ -166,20 +166,6 @@ function showTextNode(textNodeIndex) {
   }, 5000);
 }
 
-// TYPEWRITER
-// let i = 0;
-// var speed = 30; /* The speed/duration of the effect in milliseconds */
-
-// function typeWriter() {
-//   if (i < textNode.text.length) {
-//     lineElement.innerHTML += textNode.text.charAt(i);
-//     i++;
-//     setTimeout(typeWriter, speed);
-//   }
-// }
-
-// typeWriter();
-
 // LISTEN TO THE INPUT FROM PLAYER TO DISPLAY NEXT INTERACTION
 function optionInput(option) {
   const textNodeIndex = option.nextText;
@@ -329,7 +315,7 @@ function getResult() {
 
 // TO DO
 // check html syntax
-// display sentences one after the other + settimeout for button
+// display sentences one after the other
 // style the ugly alert box
 // change color of icons based on their states
 // have personalized background image for each character
@@ -348,4 +334,13 @@ function getResult() {
 //   }
 // }
 
-// typeWriter();
+// TYPEWRITER
+
+// function typeWriter(text) {
+//   let i = 0;
+//   if (i < text.length) {
+//     lineElement.innerHTML += text.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, 30);
+//   }
+// }
