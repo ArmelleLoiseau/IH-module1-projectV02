@@ -23,10 +23,6 @@ if (window.location.href.includes("index.html")) {
     localStorage.setItem("currentStates", JSON.stringify(states));
     localStorage.removeItem("popUp", JSON.stringify(popupBoxElement));
     window.location.reload();
-    if (document.querySelector("#check-result").children) {
-      let resultsDisplay = document.querySelector(".results-text");
-      resultsDisplay.innerHTML = "";
-    }
     // localStorage.removeItem("time", JSON.stringify(chronometer));
     // chronometer.currentTime = 900;
     // chronometer.start();
@@ -171,6 +167,7 @@ function showTextNode(textNodeIndex) {
 // LISTEN TO THE INPUT FROM PLAYER TO DISPLAY NEXT INTERACTION
 function optionInput(option) {
   const textNodeIndex = option.nextText;
+  const mainPageIcon = document.querySelectorAll(".start-interaction-btn");
 
   if (!option.nextText) {
     return;
@@ -293,10 +290,14 @@ const opponentPoints = () => {
 // COMPARE OPPONENT AND PLAYER AND DISPLAY RESULT
 
 function getResult() {
-  const resultsContainerElement = document.querySelector("#display-result");
+  // const resultsContainerElement = document.querySelector("#display-result");
+  const resultContainer = document.createElement("div");
+  resultContainer.className = "display-popups";
+  const bodyElement = document.querySelector("body");
+  bodyElement.appendChild(resultContainer);
   const resultsTextElement = document.createElement("p");
   resultsTextElement.className = "results-text";
-  resultsContainerElement.appendChild(resultsTextElement);
+  resultContainer.appendChild(resultsTextElement);
 
   if (playerPoints >= opponentPoints) {
     resultsTextElement.textContent =
@@ -305,6 +306,7 @@ function getResult() {
     resultsTextElement.textContent =
       "On dirait que vous vous êtes attaqués à un trop gros poisson... Perdu ! Commencez peut-être par mettre de l'ordre dans votre vie ?";
   }
+  console.log(resultsTextElement);
 }
 
 // TO DO

@@ -29,7 +29,7 @@ const textNodes = [
   {
     id: `1`,
     text: `Alors comme ça vous voulez rassembler les habitants du quartier ? Je le connais bien moi le quartier vous-savez, j'y habite depuis 40 ans...`,
-    options: [{ text: `...`, nextText: `2` }],
+    options: [{ text: `Mmm...`, nextText: `2` }],
   },
   {
     id: `2`,
@@ -39,7 +39,7 @@ const textNodes = [
   {
     id: `3`,
     text: `Vous savez, beaucoup de choses ont changé, mais dans le fond le quartier est resté le même. C'est un quartier populaire, où les gens se parlent, où il se passe toujours beaucoup de choses.`,
-    options: [{ text: `...`, nextText: "4" }],
+    options: [{ text: `Mmm...`, nextText: "4" }],
   },
   {
     id: `4`,
@@ -189,7 +189,7 @@ const textNodes = [
   {
     id: `104.b`,
     text: `Vous avez peut-être raison... C'est juste que là, ça devient n'importe quoi...`,
-    options: [{ text: `...`, nextText: `105.b` }],
+    options: [{ text: `Mmm...`, nextText: `105.b` }],
   },
   {
     id: `105.b`,
@@ -218,6 +218,7 @@ const textNodes = [
       {
         text: `Oui, et il faut qu'on soit vraiment nombreux si on veut que ça marche !`,
         nextText: `152`,
+        changeState: [{ target: "samira", value: { isContacted: true } }],
       },
     ],
   },
@@ -238,7 +239,7 @@ const textNodes = [
   {
     id: `153.a`,
     text: `Il y a tellement à faire... Tellement d'urgence...`,
-    options: [{ text: `...`, nextText: `154.a` }],
+    options: [{ text: `Mmm...`, nextText: `154.a` }],
   },
   {
     id: `154.a`,
@@ -285,7 +286,7 @@ const textNodes = [
   {
     id: `155.b.1`,
     text: `Et bien demandez aux personnes comme Josiane qui sont là depuis longtemps... La drogue c'est un problème depuis 30 ans. Ca continue parce que l'état ne fait rien... Par contre, dès que deux jeunes trainent dans un hall d'immeuble, la police débarque en 10 minutes... Vous ne trouvez pas ça bizzare vous ?`,
-    options: [{ text: `...`, nextText: `156.b.1` }],
+    options: [{ text: `Mmm...`, nextText: `156.b.1` }],
   },
   {
     id: `156.b.1`,
@@ -449,7 +450,7 @@ const textNodes = [
   {
     id: `302`,
     text: `Vous allez vouloir me faire signer un truc non ? Encore un machin inutile de geignard qui veut sauver le monde en mangeant du quinoa ? Et pendant ce temps-là, on est envahis d'étrangers et on ose même plus sortir de chez soi...`,
-    options: [{ text: `...`, nextText: `303` }],
+    options: [{ text: `Mmm...`, nextText: `303` }],
   },
   {
     id: `303`,
@@ -534,18 +535,18 @@ const textNodes = [
   {
     id: `401.a`,
     text: `Oh, vous savez... On fait ce qu'on peut. On essaie d'aider les gens, et il y a de quoi faire dans le quartier...`,
-    options: [{ text: `...`, nextText: `402.a` }],
+    options: [{ text: `Mmm...`, nextText: `402.a` }],
   },
   {
     id: `402.a`,
     text: `C'est vrai que parfois, je me demande comment les gens feraient sans nous... Entre les cours de français, l'aide aux devoirs, les colonies... Vous savez, les gens attendent beaucoup de nous...`,
-    options: [{ text: `...`, nextText: `403.a` }],
+    options: [{ text: `Mmm...`, nextText: `403.a` }],
   },
   {
     id: `403.a`,
     text: `Et comme je le dis toujours, avec de grands pouvoirs, viennent de grandes responsabilités !`,
     options: [
-      { text: `...`, nextText: `404.a` },
+      { text: `Mmm...`, nextText: `404.a` },
       {
         text: `Oui enfin c'est surtout l'oncle de Spider-man qui le dit, mais je vois où vous voulez en venir. Enfin je crois.`,
         nextText: `404.a`,
@@ -560,7 +561,7 @@ const textNodes = [
   {
     id: `405.a`,
     text: `Et bien, évidemment, je me tiens informé de tout ce qu'il se passe dans le quartier. Je suis très proche des habitants, et de leurs préoccupations... Nous prenons notre rôle très au sérieux, vous savez...`,
-    options: [{ text: `...`, nextText: `406.a` }],
+    options: [{ text: `Mmm...`, nextText: `406.a` }],
   },
   {
     id: `406.a`,
@@ -642,7 +643,7 @@ const textNodes = [
   {
     id: `501`,
     text: `Pardon, c'est vrai que c'est un peu abrupte mais c'est la course en ce moment... On va dans la salle d'activités au fond du couloir, il faut la préparer pour la fête de fin d'année.`,
-    options: [{ text: `...`, nextText: `502` }],
+    options: [{ text: `Mmm...`, nextText: `502` }],
   },
   {
     id: `502`,
@@ -715,7 +716,7 @@ const textNodes = [
   {
     id: `503.b`,
     text: `Ca me parle, ce que vous dites. Mais il faudra nous écouter vraiment, hein. Il y a des gens qui ne parlent pas bien français ici, qui n'ont pas trop l'habitude de tout ça... Alors quand ça gueule dans tous les sens, c'est pas facile de se faire entendre...`,
-    options: [{ text: `...`, nextText: `506` }],
+    options: [{ text: `Mmm...`, nextText: `506` }],
   },
   {
     id: `506`,
@@ -734,7 +735,7 @@ const textNodes = [
   {
     id: `507.a`,
     text: `Ca serait vraiment bien. Au fond, on a tous besoin des mêmes choses. Il suffirait qu'on se parle pour s'en rendre compte... Mais ça, c'est pas à la mode... Tout le monde est devant son écran, et plus personne ne se parle en vrai...`,
-    options: [{ text: `...`, nextText: `508.a` }],
+    options: [{ text: `Mmm...`, nextText: `508.a` }],
   },
   {
     id: `507.b`,
