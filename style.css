@@ -129,20 +129,23 @@ a {
 }
 
 #player {
-   position: absolute;
-   transform : translate (-50%, -50%)
+    position: absolute;
+    transform : translate(-50%,-50%);  
+    width: 120px;
+    height: 120px;
+    border: none;
 }
 
 .isPissed {
-    background-color: orangered;
+    background-color: rgba(199, 54, 23, 0.8);
 }
 
 .isContacted {
-    background-color: steelblue;
+    background-color: rgba(83, 137, 161, 0.8);
 }
 
 .isConvinced {
-    background-color: greenyellow;
+    background-color: rgba(91, 193, 92, 0.8);
 }
 
 footer {

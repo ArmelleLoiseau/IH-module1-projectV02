@@ -15,8 +15,11 @@ const characters = [
   "alimatou",
 ];
 
-// INITIALIZE THE GAME (RESET STATES, RELOAD PAGE AND ERASE PREVIOUS RESULTS)
+// INITIALIZE THE GAME (RESET STATES, RELOAD PAGE AND ERASE PREVIOUS RESULTS) + MAKE THE PLAYER ICON FOLLOW THE MOUSE
 let initialSates = states;
+
+const playerElement = document.querySelector("#player");
+
 if (window.location.href.includes("index.html")) {
   let resetBtnElement = document.querySelector("#reset");
   resetBtnElement.addEventListener("click", () => {
@@ -26,6 +29,12 @@ if (window.location.href.includes("index.html")) {
     // localStorage.removeItem("time", JSON.stringify(chronometer));
     // chronometer.currentTime = 900;
     // chronometer.start();
+  });
+  document.addEventListener("mousemove", function (e) {
+    let x = e.clientX + 100;
+    let y = e.clientY + 100;
+    playerElement.style.left = x + "px";
+    playerElement.style.top = y + "px";
   });
 }
 
