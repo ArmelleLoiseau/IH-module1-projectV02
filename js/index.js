@@ -278,7 +278,7 @@ const playerPoints = () => {
 
 // GENERATE A RANDOM RESULT FOR THE OPPONENT
 const opponentPoints = () => {
-  let result = Math.floor(Math.random() * 32);
+  let result = Math.floor(Math.random() * 20);
   return result;
 };
 
@@ -288,7 +288,7 @@ function getResult() {
   const resultContainer = document.createElement("div");
   resultContainer.className = "display-popup";
   mainContainerElement.appendChild(resultContainer);
-  const titleElement = document.createElement("h2");
+  const titleElement = document.createElement("h1");
   titleElement.classList.add("title-timesup");
   titleElement.textContent =
     "Le temps presse ! Il est l'heure de faire le bilan...";
