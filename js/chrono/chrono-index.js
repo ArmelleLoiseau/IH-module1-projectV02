@@ -1,7 +1,7 @@
-import { displayResult } from "../index.js";
+// import { displayResult } from "../index.js";
 
 const chronometer = {
-  currentTime: 5,
+  currentTime: 600,
   intervalId: null,
 
   start: (callback) => {
@@ -26,7 +26,7 @@ const chronometer = {
   stop: () => {
     clearInterval(chronometer.intervalId);
     // add a function here to display result
-    displayResult();
+    // displayResult();
   },
 };
 
